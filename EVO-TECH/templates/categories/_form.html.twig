@@ -1,0 +1,24 @@
+{{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+<table>
+ <tr>
+
+  <td> {{ form_label(form.nomCategorie,"Nom de la Catégoorie")}}</td>
+  <td>{{ form_widget(form.nomCategorie) }}</td>
+ <tr>
+  <td>{{ form_errors(form.nomCategorie) }}</td>
+ </tr>
+ </tr>
+
+ <tr>
+
+  <td> {{ form_label(form.descCategorie,"Décription de la Catégoorie")}}</td>
+  <td>{{ form_widget(form.descCategorie) }}</td>
+ <tr>
+  <td>{{ form_errors(form.descCategorie) }}</td>
+ </tr>
+ </tr>
+
+</table>
+
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

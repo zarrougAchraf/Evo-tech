@@ -1,0 +1,51 @@
+{{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+<table>
+
+<h1> Ajouter un  Produit </h1>
+ <tr>
+
+       <td>{{ form_label(form.nomProduit,"Nom de Produit")  }}</td>
+       <td>{{ form_widget(form.nomProduit) }}</td>
+     <tr>
+       <td>{{ form_errors(form.nomProduit) }}</td>
+    </tr>
+ </tr>
+
+ <tr>
+
+        <td>{{ form_label(form.descProduit,"Déscription de Produit") }}</td>
+        <td>{{ form_widget(form.descProduit)}}</td>
+     <tr>
+        <td>{{ form_errors(form.descProduit) }}</td>
+    </tr>
+ </tr>
+ <tr>
+       <td>{{ form_label(form.prixProduit,"Le prix de prooduit") }}</td>
+       <td>{{ form_widget(form.prixProduit)}}</td>
+     <tr>
+       <td>{{ form_errors(form.prixProduit) }}</td>
+    </tr>
+
+ </tr>
+
+ <tr>
+        <td>{{ form_label(form.quantiteProduit,"Quaatitée disponible") }}</td>
+        <td>{{ form_widget(form.quantiteProduit)}}</td>
+     <tr>
+        <td>{{ form_errors(form.quantiteProduit) }}</td>
+    </tr>
+ </tr>
+
+ <tr>
+         <td>{{ form_label(form.idCategorie,"Catégorie") }}</td>
+         <td> {{ form_widget(form.idCategorie)}}</td>
+     <tr>
+         <td>{{ form_errors(form.idCategorie) }}</td>
+     </tr>
+ </tr>
+
+
+</table>
+<button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+
