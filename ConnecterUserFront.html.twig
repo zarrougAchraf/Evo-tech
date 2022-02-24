@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <form action="#">
+                        <fieldset class="p-4">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6 py-2">
+                                        <input type="email" placeholder="Email *" class="form-control" required>
+                                    </div>
+                                    <div class="col-lg-6 pt-2">
+
+                                        <input type="password" placeholder="password *" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="btn-grounp">
+                                <button type="submit" class="btn btn-primary mt-2 float-right">SUBMIT</button>
+                                <a class="mt-3 d-inline-block text-primary" href="{{ path('Adduser') }}">Register Now</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

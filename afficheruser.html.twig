@@ -1,0 +1,41 @@
+{% extends 'base-back.html.twig' %}
+
+
+{% block body %}
+
+ <table  class="table table-bordered"   width="100%" cellspacing="0">
+    <tr>
+        <th>numero</th>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>age</th>
+        <th>email</th>
+        <th>poste</th>
+        <th>Delete</th>
+
+
+
+    </tr>
+     <tr {% for u in user %}>
+
+         <td>{{ u.numero }}</td>
+
+         <td>{{ u.nom }}</td>
+         <td>{{ u.prenom }}</td>
+         <td>{{ u.age }}</td>
+         <td>{{ u.email }}</td>
+         <td>{{ u.poste}}</td>
+{#         <td><a href="{{ path('update',{'id':u.numero}) }}"></a>modifier</td>#}
+         <td><a href="{{ path('Delete',{'id':u.numero}) }}">  delete</a></td>
+
+
+
+
+
+     </tr {% endfor %}>
+
+
+
+ </table>
+
+{% endblock %}

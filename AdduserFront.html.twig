@@ -1,0 +1,9 @@
+
+{% extends 'base-back.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit" class="d-block py-3 px-4 bg-primary text-white border-0 rounded font-weight-bold">Register Now</button>
+
+    {{ form_end(form) }}
+{% endblock %}
